@@ -15,141 +15,284 @@
         }
 
         header {
-            background-color: white;
-            color: darkgreen;
-            padding: 20px;
-            font-family: Georgia, serif;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            background-color: darkgreen;
-            padding: 12px;
-        }
-        nav .nav-link {
-            color: white;
-            font-weight: bold;
-            margin: 5px;
-            border-radius: 5px;
-        }
+             background-color: #F4F8F5;
+             color: darkgreen;
+             padding: 20px;
+             font-family: Georgia, serif;
+             font-size: 24px; 
+             font-weight: bold;
+           }
+       header i{
+             colour: darkgreen;
+             margin-right: 10px;
+          }
+        nav { 
+           background-color: white;
+           padding: 15px;
+           text-align: center;
+         }
+     
+        nav a {
+              color: darkgreen;
+              text-decoration: none;
+              margin: 15px;
+              font-weight: bold;
+            }
 
-        nav .nav-link:hover,
-        nav .nav-link.active {
-            background-color: #2E8B57;
-            color: white;
-        }
+         article {
+              background-color: white;
+              color: darkgreen;
+              min-height: 400px;
+           }
 
-        article {
-            background-color: #F4F8F5;
-            color: darkgreen;
-            min-height: 400px;
-            padding: 50px 30px;
-        }
+          article h2{
+              font-size: 50px;
+              font-weight: bold;
+           }
 
-        article h2 {
-            font-size: 50px;
-            font-weight: bold;
-            color: darkgreen;
-        }
+          article p{
+              font-size: 18px;
+              margin-top: 20px;
+              margin-bottom: 25px;
+           }
 
-        article p {
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-        article h3 {
-            font-size: 22px;
-            margin-top: 20px;
-        }
+           article button {
+              background-color: darkgreen;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 5px;
+              margin-right: 10px;
+              cursor: pointer;
+            }
+     
+           article img{
+              width: 1000 px;
+              height: 500px;
+              object-fit: cover;
+              border-radius: 10px;
+              
+           }
 
-        article img {
-            width: 100%;
-            max-width: 650px;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+           section {
+              background-color: white;
+              color: darkgreen;
+              text-align: center;
+              padding: 50px 20px;
+           }
+           
+           section h2{
+              font-size: 30px;
+              margin-bottom: 20px;
+           }
 
-        article button {
-            background-color: #2E8B57;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            margin: 10px 10px 10px 0;
-            cursor: pointer;
-        }
+           footer{
+               background-color: darkgreen;
+               color: white;
+               text-align: center;
+               padding: 25px;
+            }
+  #donorForm{
+    display:none;
+    width:400px;
+    margin:20px auto;
+    padding:20px;
+    background: #f9f9f9;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
 
-        article button:hover {
-            background-color: darkgreen;
-            color: white;
-        }
+#donorForm h2{
+    text-align:center;
+    color:darkgreen;
+    font-size:22px;
+    margin-bottom:15px;
+}
 
-        section {
-            background-color: white;
-            color: darkgreen;
-            text-align: center;
-            padding: 50px 20px;
-        }
+#donorForm label{
+    display:block;
+    color:black;
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:4px;
+}
 
-        section h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+#donorForm input,
+#donorForm select{
+    width:100%;
+    padding:8px;
+    color:black;
+    background:white;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
 
-        footer {
-            background-color: darkgreen;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>LIFE BRIDGE</h1>
-    </header>
-    <nav>
-        <div class="container">
-            <div class="nav nav-pills nav-justified">
-                <a class="nav-link active" href="index.html">Home</a>
-                <a class="nav-link" href="about.html">About us</a>
-                <a class="nav-link" href="#">Donate</a>
-                <a class="nav-link" href="#">Donor Registration</a>
-                <a class="nav-link" href="FAQS.html">FAQ's</a>
-                <a class="nav-link" href="contacts.html">Contacts</a>
-            </div>
+#registerButton{
+    width:100%;
+    margin-top:15px;
+    background-color:darkgreen;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:opacity 0.3s;
+}
+
+#registerButton:hover{
+    opacity:0.7;
+}
+
+#registerButton:active{
+    opacity:0.5;
+}
+
+#donorForm input[type="checkbox"]{
+    width:auto;
+    background-color:white;
+    accent-color: lightblue;
+}
+
+#successMessage{
+    display:none;
+    color:green;
+    font-weight:bold;
+    text-align:center;
+    margin-top:10px;
+}
+         
+   </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>LIFE BRIGDE</h1>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+	          <nav class="navbar sm:navbar-expand bg-1 fg-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navigation</a>
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body">
+        <div class="nav nav-pills navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="about.html">About us</a>
+          <a class="nav-link" href="#">Donate</a>
+          <a class="nav-link" href="donor-registration.html" onclick="showForm()">
+            Donor Registration
+        </a>
+          <a class="nav-link" href="#">FAQ's</a>
+          <a class="nav-link" href="#">Contacts</a>
         </div>
-    </nav>
+      </div>
+    </dialog>
+  </div>
+</nav>
+	  
+    <article class="container py-5">
+         <h2>Every life saved<br>
+             begins with a bridge
+         </h2>
 
-    <article class="container-fluid">
-        <h2>
-            Every life saved<br>
-            begins with a bridge
-        </h2>
-        <p>
-            LIFE BRIDGE connects people who choose to give
-            with people who are waiting for an organ transplant
-            through licensed transplant centers, fair matching
-            and consent at every step.
-        </p>
-        <p><strong>
-            In Uganda, thousands suffer from kidney failure,
-            liver failure and blindness due to cornea disease.
-            Without donors, many die waiting.
-            WE BRIDGE THAT GAP.
-        </strong></p>
-        <img src="Life-bridge.jpeg" alt="Life Bridge">
-        <br>
-        <button type="button" class="btn">
-            Become a Donor
-        </button>
-        <button type="button" class="btn">
-            I'm waiting for a transplant
-        </button>
+         <p> LIFE BRIDGE connects people who choose to give 
+             with people who are waiting for an organ transplant
+             through licensed<br> transplant centers, fair matching and
+             consent at every step. 
+			 <br><h3>In Uganda, thousands suffer from kidney failure, liver failure and blindness due to cornea disease. Without donors, <br>many die waiting. WE BRIGDE THAT GAP</h3></br>
+         </p>
+         <img src="Life bridge.jpeg" alt="Life Bridge">
+
+    <div style="text-align:center; margin-top:20px;">
+  <button type="button" class="btn">Become a Donor</button>
+  <button type="button" class="btn">I'm waiting for a transplant</button>
+  <button type="button" class="btn" onclick="showForm()">
+    Donor Registration
+</button>
+    </div>
+         
     </article>
-    
+
+    <div id="donorForm">
+
+    <h2>Donor Registration Form</h2>
+
+    <form onsubmit="registerDonor(event)">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" min="18" required>
+        </div>
+
+        <div class="form-group">
+            <label>Blood Group</label>
+            <select required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Organ Willing To Donate</label>
+            <select required>
+                <option value="">Select Organ</option>
+                <option>Kidney</option>
+                <option>Liver</option>
+                <option>Heart</option>
+                <option>Lungs</option>
+                <option>Pancreas</option>
+                <option>Cornea</option>
+            </select>
+        </div>
+
+ <div class="consent-box">
+    <label>
+        <input type="checkbox" required>
+        I consent to organ donation registration.
+    </label>
+  </div>
+
+      <button ype="submit" id="registerButton">
+        Register As Donor
+      </button>
+
+    </form>
+
+    <p id="successMessage">
+        ✅ Registration Successful! Thank you for becoming a donor.
+    </p>
+
+</div>
+  
+
     <section>
         <h2>Connecting Lives Through Organ Donation</h2>
         <p>
@@ -165,7 +308,32 @@
         <p>0744456786</p>
     </footer>
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+<script>
 
-</body>
+function showForm() {
+
+    let form = document.getElementById("donorForm");
+
+    if(form.style.display === "none" || form.style.display === ""){
+        form.style.display = "block";
+
+        form.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    } else {
+        form.style.display = "none";
+    }
+}
+
+function registerDonor(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+}
+
+</script>
+
+  </body>
 </html>
