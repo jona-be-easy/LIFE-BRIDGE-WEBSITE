@@ -63,22 +63,23 @@
     border-radius:5px;
     background:white;
     color:black;
+    }
 
-        input:focus,
-        select:focus{
+  input:focus,
+  select:focus{
            border:2px solid darkgreen;
            outline:none;
            box-shadow:0 0 5px rgba(0,100,0,0.3);
         }
 
-    .consent-box{
+  .consent-box{
         margin-top:15px;
         background:white;
         padding:10px;
         border-radius:5px;
 }
 
-        #registerButton{
+  #registerButton{
             width:100%;
             margin-top:20px;
             padding:12px;
@@ -88,20 +89,8 @@
             border-radius:5px;
             cursor:pointer;
             font-size:1rem;
-            transition:opacity 0.3s ease;
+            transition:all 0.3s ease;
         }
-
- #registerButton{
-    width:100%;
-    margin-top:20px;
-    padding:12px;
-    background-color:darkgreen;
-    color:white;
-    border:none;
-    border-radius:5px;
-
-    transition:all 0.3s ease;
-}
 
 #registerButton:hover{
     opacity:0.85;
@@ -112,7 +101,7 @@
     opacity:0.6;
         }
 
-.success{
+#successMessage{
     display:none;
     background:#d4edda;
     color:#155724;
@@ -176,11 +165,14 @@
 
             <input type="email" required>
 
-            <label>
-                Phone Number<span style="color:red;">*</span>
-            </label>
-            
-             <input type="tel" required>
+           <label>
+                  Phone Number <span style="color:red;">*</span>
+           </label>
+                  <input type="tel"
+                   placeholder="07XXXXXXXX"
+                   required
+                   oninvalid="this.setCustomValidity('Please enter your phone number')"
+                   oninput="this.setCustomValidity('')">
 
             <label>
                 Age <span style="color:red;">*</span>
@@ -209,16 +201,6 @@
              </label>
 
             <input type="text" required>
-            
-      <label>
-          Phone Number <span style="color:red;">*</span>
-       </label>
-            
-          <input type="tel" 
-              placeholder="07XXXXXXXX"
-              required
-              oninvalid="this.setCustomValidity('Please enter your phone number')"
-              oninput="this.setCustomValidity('')">
 
         <label>
             Blood group <span style="color:red;">*</span>
@@ -283,5 +265,18 @@
 
 </div>
 <div id="footer"></div> 
+        
+ <script>
+
+   function registerDonor(event){
+
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+
+    event.target.reset();
+}
+
+</script>
 </body>
 </html>
