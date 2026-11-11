@@ -200,8 +200,12 @@
                  <input type="text" required>
              </label>
       <label>
-             Phone Number <span style="color:red;">*</span>
-          <input type="tel" required>
+          Phone Number <span style="color:red;">*</span>
+          <input type="tel" 
+              placeholder="07XXXXXXXX"
+              required
+              oninvalid="this.setCustomValidity('Please enter your phone number')"
+              oninput="this.setCustomValidity('')">
       </label>
 
         <label>
