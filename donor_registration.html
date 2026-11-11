@@ -54,13 +54,12 @@
             color:black;
         }
 
-        input,
-        select{
-            width:100%;
-            padding:10px;
-            margin-top:5px;
-            border:1px solid #ccc;
-            border-radius:5px;
+        input:focus,
+        select:focus{
+           border:2px solid darkgreen;
+           outline:none;
+           background-color:white;
+           box-shadow:0 0 5px rgba(0,100,0,0.3);
         }
 
     .consent-box{
@@ -115,6 +114,18 @@
     text-align:center;
     font-weight:bold;
         }
+.home-link{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:darkgreen;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.home-link:hover{
+    text-decoration:underline;
+}
 .success.is-visible{display:block;}
 
         @media (max-width: 600px) {
